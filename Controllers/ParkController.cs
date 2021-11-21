@@ -9,7 +9,7 @@ using NationalParksApi.Models;
 
 namespace NationalParksApi.Controllers
 {
-  [Route("api/controller")]
+  [Route("api/nationalparks/[controller]")]
   [ApiController]
   public class ParksController : ControllerBase
   {
@@ -17,6 +17,11 @@ namespace NationalParksApi.Controllers
     public ParksController(NationalParksApiContext db)
     {
       _db = db;
+    }
+     [HttpGet]
+    public async Task<ActionResult<IEnumerable<Park>>> Get()
+    {
+      return await _db.Parks.ToListAsync();
     }
   }
 }
