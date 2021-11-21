@@ -30,12 +30,9 @@ This is a web API of a database for national parks in the United States. It was 
 * VS Code
 
 ## Setup/Installation Requirements <a id="setup"></a>
-
-#### Install C#, .NET, MySQL Workbench, and MySQL Community Server
-* Open the terminal on your local machine
 * If [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) and [.NET](https://docs.microsoft.com/en-us/dotnet/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/c-and-net-part-time-c-and-react-track/getting-started-with-c/installing-c-and-net)
 * If [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) and [MySQL Workbench](https://www.mysql.com/products/workbench/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/c-and-net-part-time-c-and-react-track/getting-started-with-c/installing-and-configuring-mysql)
-Installation
+* Open the terminal on your local machine
 * Clone this repository to your machine `$ git clone https://github.com/marnionrails/NationalParksApi.Solution`
 * Create `appsettings.json` file:
 ```
