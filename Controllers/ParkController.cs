@@ -19,9 +19,26 @@ namespace NationalParksApi.Controllers
       _db = db;
     }
      [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get()
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string name, string region, string state, string description)
     {
-      return await _db.Parks.ToListAsync();
+      var query = _db.Parks.AsQueryable();
+       if (name != null)
+      {
+        query = query.Where(e => e.Name == name);
+      }
+      if (region != null)
+      {
+        query = query.Where(e => e.Region == region);
+      }
+       if (state != null)
+      {
+        query = query.Where(e => e.State == state);
+      }
+      if (description != null)
+      {
+        query = query.Where(e => e.Description.Contains(description));
+      }
+      return await query.ToListAsync();
     }
 
     [HttpPost]
