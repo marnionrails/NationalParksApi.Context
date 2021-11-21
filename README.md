@@ -48,8 +48,9 @@ This is a web API of a database for national parks in the United States. It was 
 * Navigate to desired endpoint as documented below
 
 ## Endpoints <a id="endpoints"></a>
+The Swagger user interface will allow you to "try out" any of the endpoints.
 
-To see Swagger documentation (while server is running!), click [here](http://localhost:5000/swagger)
+To see Swagger documentation and utilize the feature (while server is running!), click [here](http://localhost:5000/swagger)
 
 #### GET
 
