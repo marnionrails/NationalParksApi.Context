@@ -58,6 +58,19 @@ namespace NationalParksApi.Controllers
       }
       return Park;
     }
+
+    [HttpGet("{random}")]
+      public async Task<ActionResult<IEnumerable<Park>>> Get(int id)
+    {
+      Random val = new Random();
+      int randomId = val.Next(1,8);
+      var Park = await _db.Parks.FindAsync(randomId);
+      if (Park == null)
+      {
+        return NotFound();
+      }
+      return await query.ToListAsync();
+    }
         [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePark(int id)
     {
